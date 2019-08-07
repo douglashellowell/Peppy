@@ -26,11 +26,6 @@ An easy and quick to use app for streamers and TOs to use alongside OBS
 - /icons/insuseB.png (Player B icon)
 
 2. Add attendee tags to ./attendees.txt (one attendee per line)
-i.e
-- player1
-- player2
-- player3
-- player4
 
 # How to use
 - Select Bracket side, Round
