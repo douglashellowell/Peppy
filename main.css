@@ -3,6 +3,7 @@ body {
     background-color: #171717;
     color: white;
     -webkit-app-region: drag;
+    margin: 0px;
 }
 
 #playerATag #playerBTag {
@@ -88,6 +89,7 @@ input {
      color: yellow;
      cursor: pointer;
      -webkit-app-region: no-drag;
+     text-indent: 13px;
  }
 
 .roundStageselectors {
@@ -161,6 +163,7 @@ input {
     padding-left: 30px;
     padding-right: 30px; 
     padding-top: 10px; 
+    padding-bottom: 15px;
     text-align: center;
 }
 
@@ -230,4 +233,62 @@ input {
     font-size: 10px;
     color: #c2c2c2;
     font-style: italic;
+}
+
+.inversepenta {
+        border-top: 25px solid red;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+        height: 0px;
+        width: 290px;
+        margin: auto;
+        font-family: Impact, Charcoal, sans-serif;
+        font-size: 25px;
+        letter-spacing: 6px;
+        color: #FFFFFF;
+        font-weight: 400;
+        -webkit-app-region: no-drag;
+}
+
+.clickhere {
+    position: relative;
+    top: -30px;
+    left: 64px;
+    -webkit-app-region: no-drag;
+    cursor: pointer;
+}
+
+.updateclicker {
+    width: 100%;
+    height: 45px;
+    background: black;
+    text-align: center;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 40px;
+    letter-spacing: 30px;
+    color: #F5FF0A;
+    font-weight: 400;
+    font-style: italic;
+    -webkit-app-region: no-drag;
+    cursor: pointer;
+}
+
+.updateclicker:hover {
+    color: #F5FF0A;
+    text-shadow: 0 0 10px #F5FF0A;
+}
+
+.updatebars {
+    width: 100%;
+    height: 4px;
+    background: red;
+    -webkit-app-region: no-drag;
+}
+
+.updatecontainer div {
+    opacity: 0.5;
+}
+
+.updatecontainer:hover div {
+    opacity: 1;
 }
