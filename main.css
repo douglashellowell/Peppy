@@ -288,10 +288,6 @@ input {
     text-shadow: 0 0 10px #F5FF0A;
 }
 
-.updateclicker:active {
-    text-shadow: 0 0 50px #F5FF0A;
-    background: #2E2E2E;
-}
 
 .updatebars {
     width: 100%;
@@ -308,4 +304,8 @@ input {
 .updatecontainer:hover div {
     opacity: 1;
     text-shadow: 0 0 10px #F5FF0A;
+}
+
+.updatecontainer:active div {
+    filter: brightness(150%);
 }
