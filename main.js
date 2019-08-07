@@ -22,7 +22,7 @@ function createWindow () {
   })
 
   // Set to always on top
-  mainWindow.setAlwaysOnTop(true);
+ // mainWindow.setAlwaysOnTop(true);
 
   // mainWindow.setMenu(null);
   // and load the index.html of the app.

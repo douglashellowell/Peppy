@@ -214,8 +214,8 @@ function iconchangeB(char, colour) {
 // Load attendees.txt
 playerArray = [];
 function loadAttendeesTxt() {
-  var text = fs.readFileSync("./attendees.txt").toString('utf-8');
-  var playersByLine = text.split("\n")
+  var text = fs.readFileSync("./attendees.txt").toString();
+  var playersByLine = text.split("\r\n")
   playerArray = playersByLine;
   var options = '';
   for(var i =0; i < playerArray.length; i++)
@@ -229,3 +229,4 @@ loadAttendeesTxt();
 function resetpage() {
   location = location;
 }
+
