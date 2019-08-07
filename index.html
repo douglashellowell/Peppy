@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Peppy - by Doug</title>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body style="-webkit-app-region: drag;">
+
+    <!-- Round selection  Winners/Losers Round #/Semis/Finals-->
+    <div class="roundStage"> 
+      <p class="reset" onclick="resetpage()">Reset &#8617</p>
+      <div class="roundStageselectors">
+        <select name="backetSide" id="bracketSide" class="roundDropdown">
+          <option value="" disabled selected>Bracket Side</option>
+          <option value="Winners">Winners</option>
+          <option value="Losers">Losers</option>
+          <option value="Pools">Pools</option>
+          <option value="Friendlies">Friendlies</option>
+        </select>
+        <select name="roundID" id="roundID" class="roundDropdown">
+          <option value="" disabled selected>Round</option>
+          <optgroup label="Rounds">
+            <option value="Round1">Round 1</option>
+            <option value="Round2">Round 2</option>
+            <option value="Round3">Round 3</option>
+            <option value="Round4">Round 4</option>
+            <option value="Round5">Round 5</option>
+          </optgroup>
+          <optgroup label="Abbreviated">
+            <option value="Quarters">Quarters</option>
+            <option value="Semis">Semis</option>
+            <option value="Finals">Finals</option>
+            <option value="Grands">Grands</option>
+          </optgroup>
+          <optgroup label="Long Name">
+            <option value="Quarter Finals">Quarter Finals</option>
+            <option value="Semi Finals">Semi Finals</option>
+            <option value="Finals">Finals</option>
+            <option value="Grand Finals">Grand Finals</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+
+<!-- Player tags, icons and score controls -->
+<div class="consoleContainer">
+
+    <div class="playerAConsole">
+
+      <div class="AscoreDiv">
+      <button class="button incscore" onclick="incA(1)"><img src="./uparrow.svg" alt=""></button>
+        <div id="scoreA"  style="color:white;text-align: center;padding: 15px;">scoreA</div>
+      <button class="button decscore" onclick="decA(1)"><img src="./downarrow.svg" alt=""></button>
+      </div>
+      
+      <div class="Atagicon">
+
+      <div class="atagbox">
+        <p>Player A</p> 
+        <div onmousedown="document.getElementById('playerATag').value=''"><input list="playerList" id="playerATag" placeholder="Type and select tag"></div>
+      </div>
+
+      <div id='AiconDiv'>
+        <div class="inuseicon"><img id ="playerAicon" src="./icons/inuse.png" alt="playerAicon" height="50px" width="50px"></div>
+        <div class="iconswatch" id="playerASwatch">
+          <p class="clickhint">left-click an icon</p>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="playerBConsole">
+      <div class="Btagicon">
+      
+      <div class="btagbox">
+        <p>Player B</p>
+        <div onmousedown="document.getElementById('playerBTag').value=''"><input list="playerList" id="playerBTag" placeholder="Type and select tag"></div>
+        <datalist id="playerList">
+        </datalist>
+      </div>
+  
+      <div id='BiconDiv'>
+          <div class="inuseicon"><img id ="playerBicon" src="./icons/inuseB.png" alt="playerBicon" height="50px" width="50px" ></div>
+          <div class="iconswatch" id="playerBSwatch">
+            <p class="clickhint">right-click an icon</p>
+          </div>
+      </div>
+  
+    </div>
+      
+      <div class="BscoreDiv">
+        <button class="button incscore" onclick="incB(1)"><img src="./uparrow.svg" alt=""></button>
+          <div id="scoreB" style="color:white;text-align: center;padding: 15px;">scoreB</div>
+        <button class="button decscore" onclick="decB(1)"><img src="./downarrow.svg" alt=""></button>
+      </div>
+
+
+    </div>
+
+</div>
+<div class="footerdiv">
+    <div class="characterGrid">
+        <div class="charactericon topRow"><img class="iconimg" src="./icons/doc_neut.png" alt="" onclick="iconchangeA('doc', 'neut')" oncontextmenu="iconchangeB('doc', 'neut')"></div>
+        <div class="charactericon topRow"><img class="iconimg" src="./icons/mario_neut.png" alt="" onclick="iconchangeA('mario', 'neut')" oncontextmenu="iconchangeB('mario', 'neut')"></div>
+        <div class="charactericon topRow"><img class="iconimg" src="./icons/luigi_neut.png" alt="" onclick="iconchangeA('luigi', 'neut')" oncontextmenu="iconchangeB('luigi', 'neut')"></div>
+        <div class="charactericon topRow"><img class="iconimg" src="./icons/bowser_neut.png" alt="" onclick="iconchangeA('bowser', 'neut')" oncontextmenu="iconchangeB('bowser', 'neut')"></div>
+        <div class="charactericon topRow"><img class="iconimg" src="./icons/peach_neut.png" alt="" onclick="iconchangeA('peach', 'neut')" oncontextmenu="iconchangeB('peach', 'neut')"></div>
+        <div class="charactericon topRow"><img class="iconimg" src="./icons/yoshi_neut.png" alt="" onclick="iconchangeA('yoshi', 'neut')" oncontextmenu="iconchangeB('yoshi', 'neut')"></div>
+        <div class="charactericon topRow"><img class="iconimg" src="./icons/DK_neut.png" alt="" onclick="iconchangeA('DK', 'neut')" oncontextmenu="iconchangeB('DK', 'neut')"></div>
+        <div class="charactericon topRow"><img class="iconimg" src="./icons/cptfalcon_neut.png" alt="" onclick="iconchangeA('cptfalcon', 'neut')" oncontextmenu="iconchangeB('cptfalcon', 'neut')"></div>
+        <div class="charactericon topRow"><img class="iconimg" src="./icons/ganon_neut.png" alt="" onclick="iconchangeA('ganon', 'neut')" oncontextmenu="iconchangeB('ganon', 'neut')"></div>
+        <div class="charactericon midRow"><img class="iconimg" src="./icons/falco_neut.png" alt="" onclick="iconchangeA('falco', 'neut')" oncontextmenu="iconchangeB('falco', 'neut')"></div>
+        <div class="charactericon midRow"><img class="iconimg" src="./icons/fox_neut.png" alt="" onclick="iconchangeA('fox', 'neut')" oncontextmenu="iconchangeB('fox', 'neut')"></div>
+        <div class="charactericon midRow"><img class="iconimg" src="./icons/ness_neut.png" alt="" onclick="iconchangeA('ness', 'neut')" oncontextmenu="iconchangeB('ness', 'neut')"></div>
+        <div class="charactericon midRow"><img class="iconimg" src="./icons/ics_neut.png" alt="" onclick="iconchangeA('ics', 'neut')" oncontextmenu="iconchangeB('ics', 'neut')"></div>
+        <div class="charactericon midRow"><img class="iconimg" src="./icons/kirby_neut.png" alt="" onclick="iconchangeA('kirby', 'neut')" oncontextmenu="iconchangeB('kirby', 'neut')"></div>
+        <div class="charactericon midRow"><img class="iconimg" src="./icons/samus_neut.png" alt="" onclick="iconchangeA('samus', 'neut')" oncontextmenu="iconchangeB('samus', 'neut')"></div>
+        <div class="charactericon midRow"><img class="iconimg" src="./icons/sheik_neut.png" alt="" onclick="iconchangeA('sheik', 'neut')" oncontextmenu="iconchangeB('sheik', 'neut')"></div>
+        <div class="charactericon midRow"><img class="iconimg" src="./icons/link_neut.png" alt="" onclick="iconchangeA('link', 'neut')" oncontextmenu="iconchangeB('link', 'neut')"></div>
+        <div class="charactericon midRow"><img class="iconimg" src="./icons/younglink_neut.png" alt="" onclick="iconchangeA('younglink', 'neut')" oncontextmenu="iconchangeB('younglink', 'neut')"></div>
+        <div class="charactericon botRow"><img class="iconimg" src="./icons/pichu_neut.png" alt="" onclick="iconchangeA('pichu', 'neut')" oncontextmenu="iconchangeB('pichu', 'neut')"></div>
+        <div class="charactericon botRow"><img class="iconimg" src="./icons/pikachu_neut.png" alt="" onclick="iconchangeA('pikachu', 'neut')" oncontextmenu="iconchangeB('pikachu', 'neut')"></div>
+        <div class="charactericon botRow"><img class="iconimg" src="./icons/puff_neut.png" alt="" onclick="iconchangeA('puff', 'neut')" oncontextmenu="iconchangeB('puff', 'neut')"></div>
+        <div class="charactericon botRow"><img class="iconimg" src="./icons/mewtwo_neut.png" alt="" onclick="iconchangeA('mewtwo', 'neut')" oncontextmenu="iconchangeB('mewtwo', 'neut')"></div>
+        <div class="charactericon botRow"><img class="iconimg" src="./icons/gnw_neut.png" alt="" onclick="iconchangeA('gnw', 'neut')" oncontextmenu="iconchangeB('gnw', 'neut')"></div>
+        <div class="charactericon botRow"><img class="iconimg" src="./icons/marth_neut.png" alt="" onclick="iconchangeA('marth', 'neut')" oncontextmenu="iconchangeB('marth', 'neut')"></div>
+        <div class="charactericon botRow"><img class="iconimg" src="./icons/roy_neut.png" alt="" onclick="iconchangeA('roy', 'neut')" oncontextmenu="iconchangeB('roy', 'neut')"></div>
+        <div class="charactericon botRow"><img class="iconimg" src="./icons/zelda_neut.png" alt="" onclick="iconchangeA('zelda', 'neut')" oncontextmenu="iconchangeB('zelda', 'neut')"></div>
+      </div>
+    <div class='Updatediv'>
+        <button class="Update Update2" onclick="updateTags()">Update</button>
+    </div>
+  </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

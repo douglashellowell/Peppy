@@ -1,0 +1,233 @@
+body {
+    font: 16px Arial;
+    background-color: #171717;
+    color: white;
+    -webkit-app-region: drag;
+}
+
+#playerATag #playerBTag {
+    border: 1px solid transparent;
+    background-color: #d1d1d1;
+    font-size: 16px;
+    height: 30px;
+}
+
+input {
+    height: 40px;
+    width: 200px;
+    text-indent: 13px;
+}
+
+
+
+.consoleContainer {
+    margin: auto;
+}
+
+.playerAConsole {
+    background-color: #2E2E2E;
+    float: left;
+    width: 49%;
+    height: 222px;
+    display: flex;
+    flex-flow: row;
+}
+
+.AscoreDiv {
+    margin: 30px 20px;
+    text-align: center;
+    background: #4A4A4A
+}
+
+.atagbox {
+    margin: 30px 10px 15px;
+}
+
+.Atagicon {
+    text-align: center;
+}
+
+.AiconDiv {
+    margin: auto;
+}
+
+.playerBConsole {
+    background-color: #2E2E2E;
+    text-align: right;
+    float: right;
+    width: 49%;
+    height: 222px;
+    display: flex;
+    flex-flow: row;
+}
+
+.BscoreDiv {
+    margin: 30px 20px;
+    text-align: center;
+    background: #4A4A4A;
+}
+
+.btagbox {
+    margin: 30px 10px 15px;
+}
+
+.Btagicon {
+    text-align: center;
+}
+
+.BiconDiv {
+    margin: auto;
+}
+
+.roundStage {
+    display: flex; 
+}
+
+.reset {
+    justify-content: flex-start;
+     color: yellow;
+     cursor: pointer;
+     -webkit-app-region: no-drag;
+ }
+
+.roundStageselectors {
+    margin: auto 0px auto auto;
+}
+
+
+.Update {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+.Update:hover {
+    background: rgb(93, 174, 255);
+}
+
+.button {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 10px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-app-region: no-drag;
+}
+
+input {
+    border-radius: 5px;
+    -webkit-app-region: no-drag;
+}
+
+.loadbutton {
+    border-color: darkgrey;
+    color: black;
+}
+
+.loadbutton:hover {
+    background: #e7e7e7;
+}
+
+.roundDropdown {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 10px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-app-region: no-drag;
+}
+
+.incscore {
+    border-color: rgb(108, 184, 108);
+    background: rgb(211, 255, 211);
+    -webkit-app-region: no-drag;
+}
+
+.decscore {
+    border-color: rgb(255, 134, 134);
+    background: rgb(255, 217, 217)
+    -webkit-app-region: no-drag;
+}
+
+.characterGrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    grid-gap: 10px;
+    padding-left: 30px;
+    padding-right: 30px; 
+    padding-top: 10px; 
+    text-align: center;
+}
+
+.botrowflex {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.botrow {
+    padding: 10px;
+}
+
+.iconimg {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+
+}
+.charactericon {
+    border: 2px solid #6F6F6F;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    color: red;
+    background-color: #343434;
+    -webkit-app-region: no-drag;
+}
+
+.charactericon:hover {
+    background-color: #7fffd4;
+}
+
+
+.incscore, .decscore {
+    width: 50px;
+    height: 60px;
+    -webkit-app-region: no-drag;
+}
+
+.scoreA .scoreB {
+    color:white;
+    text-align: center;
+    padding: 10px;
+}
+
+.Update2 {
+    height: 40px;
+    margin: 10px 10px 0px 10px;
+    width: 80%;
+    -webkit-app-region: no-drag;
+}
+
+.Updatediv {
+    text-align: center;
+}
+
+.icon {
+    -webkit-app-region: no-drag;
+}
+
+.icon:hover {
+    background: #7fffd4;
+}
+
+.clickhint {
+    font-size: 10px;
+    color: #c2c2c2;
+    font-style: italic;
+}
