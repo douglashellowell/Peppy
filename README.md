@@ -1,8 +1,18 @@
 # Peppy
  Melee Scoreboading App
 
+![Peppy Preview](./peppyimg.png)
+
 # Purpose
 An easy and quick to use app for streamers and TOs to use alongside OBS 
+
+# Roadplan
+- Smash.gg integration for easy player Tags
+- 4-player mode (For Dubs)
+- Port-settings
+- Slippi Stats
+- Auto score inc via slippi
+- Player profile saving (link tag to character&colour)
 
 # How to setup
 1. Point the appropriate elements in OBS to:
@@ -32,4 +42,4 @@ player4
 (note: icons and scores change immediately, tags and bracketside/round need "Update" to be clicked)
 - Click "Reset" to reset when new players arrive
 
-![Peppy Preview](./peppyimg.png)
+
