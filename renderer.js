@@ -2,6 +2,43 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 
+// Changes requiring update checker
+setInterval(function(){ 
+  currentAtag = fs.readFileSync('./Tags/playerATag.txt');
+  currentBtag = fs.readFileSync('./Tags/playerBTag.txt');
+  currentroundID = fs.readFileSync('./Stage/roundID.txt');
+  currentbracket = fs.readFileSync('./Stage/bracketside.txt');
+ 
+  statetagA = document.getElementById("playerATag").value;
+  statetagB = document.getElementById("playerBTag").value;
+  statebracket = document.getElementById("bracketSide").value;
+  stateround = document.getElementById("roundID").value;
+  if (currentAtag.toString() === statetagA.toString() && currentBtag.toString() === statetagB.toString() && currentroundID.toString() === stateround.toString() && currentbracket.toString() === statebracket.toString()){
+    document.getElementById("botbar1").style.setProperty('opacity', '.3')
+    document.getElementById("botbar2").style.setProperty('opacity', '.3')
+    document.getElementById("botbar3").style.setProperty('opacity', '.3')
+    document.getElementById("botbar4").style.setProperty('opacity', '.3')
+    document.getElementById("botbar5").style.setProperty('opacity', '.3')
+  } else {
+    document.getElementById("botbar1").style.setProperty('opacity', '1')
+    document.getElementById("botbar2").style.setProperty('opacity', '1')
+    document.getElementById("botbar3").style.setProperty('opacity', '1')
+    document.getElementById("botbar4").style.setProperty('opacity', '1')
+    document.getElementById("botbar5").style.setProperty('opacity', '1')
+  }
+  }, 100);
+
+// close and min events
+const remote = require('electron').remote;
+document.getElementById("close-btn").addEventListener("click", function (e) {
+  var window = remote.getCurrentWindow();
+  window.close();
+}); 
+document.getElementById("min-btn").addEventListener("click", function (e) {
+  var window = remote.getCurrentWindow();
+  window.minimize(); 
+});
+
 //Score A initialise
 var scoreAOriginal = 0;
 var dx = scoreAOriginal;

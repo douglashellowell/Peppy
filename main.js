@@ -10,10 +10,10 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 699,
-    height: 644,
-   // resizable:false,
-   // frame:false,
+    width: 646,
+    height: 574,
+   resizable:false,
+   frame:false,
     icon:'./icon.png',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),

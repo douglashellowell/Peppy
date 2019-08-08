@@ -20,7 +20,6 @@ input {
 }
 
 
-
 .consoleContainer {
     margin: auto;
 }
@@ -141,6 +140,7 @@ input {
     font-size: 14px;
     cursor: pointer;
     border-radius: 5px;
+    width: 135px;
     -webkit-app-region: no-drag;
 }
 
@@ -152,7 +152,7 @@ input {
 
 .decscore {
     border-color: rgb(255, 134, 134);
-    background: rgb(255, 217, 217)
+    background: rgb(255, 217, 217);
     -webkit-app-region: no-drag;
 }
 
@@ -282,12 +282,12 @@ input {
     transition-duration: 0.2s;
 }
 
-
+/*
 .updateclicker:hover {
     color: #F5FF0A;
     text-shadow: 0 0 10px #F5FF0A;
 }
-
+*/
 
 .updatebars {
     width: 100%;
@@ -308,4 +308,24 @@ input {
 
 .updatecontainer:active div {
     filter: brightness(150%);
+}
+
+.windowcontrols {
+    display: flex;
+    flex-direction: row;
+}
+
+.close {
+    -webkit-app-region: no-drag;
+    color: red;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.min {
+    color: yellow;
+    margin-left: 145px;
+    padding-right: 10px;
+    -webkit-app-region: no-drag;
+    cursor: pointer;
 }
