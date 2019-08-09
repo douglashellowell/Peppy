@@ -39,6 +39,22 @@ document.getElementById("min-btn").addEventListener("click", function (e) {
   window.minimize(); 
 });
 
+// windows resizer
+const {ipcRenderer} = require('electron');
+let btn = document.getElementById('btn');
+btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('visableprog').style.visibility= "hidden";
+    document.getElementById('btn2').style.visibility= "visible";
+    ipcRenderer.send('resize', 300, 90);
+});
+let btn2 = document.getElementById('btn2');
+btn2.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('visableprog').style.visibility= "visible";
+    ipcRenderer.send('resize', 646, 574);
+});
+
 //Score A initialise
 var scoreAOriginal = 0;
 var dx = scoreAOriginal;
@@ -152,15 +168,15 @@ function updateTags() {
 }
 
 // Set icons to default
-fs.copyFile('./placeholder.png', './icons/inuse.png', (err) => {
+fs.copyFile('./placeholder.png', './inuse.png', (err) => {
   if (err) throw err;
   console.log('A icon set to default!');
-  document.getElementById('playerAicon').src = "./icons/inuse.png?random="+new Date().getTime();
+  document.getElementById('playerAicon').src = "./inuse.png?random="+new Date().getTime();
 });
-fs.copyFile('./placeholder.png', './icons/inuseB.png', (err) => {
+fs.copyFile('./placeholder.png', './inuseB.png', (err) => {
   if (err) throw err;
   console.log('B icon set to default!');
-  document.getElementById('playerBicon').src = "./icons/inuseB.png?random="+new Date().getTime();
+  document.getElementById('playerBicon').src = "./inuseB.png?random="+new Date().getTime();
 });
 //document.getElementById('playerAicon').src='./placeholder.png';
 //document.getElementById('playerBicon').src='./placeholder.png';
@@ -170,10 +186,10 @@ fs.copyFile('./placeholder.png', './icons/inuseB.png', (err) => {
 const colourOptions = ['neut', 'red', 'blue', 'green', 'black', 'white', 'yellow', 'cyan', 'purp', 'ora', 'pink']
 
 function iconchangeA(char, colour) {
-  fs.copyFile('./icons/' + char + '_' + colour + '.png', './icons/inuse.png', (err) => {
+  fs.copyFile('./icons/' + char + '_' + colour + '.png', './inuse.png', (err) => {
     if (err) throw err;
     console.log('A changed to ' + char + colour +'!');
-    document.getElementById('playerAicon').src = "./icons/inuse.png?random="+new Date().getTime();
+    document.getElementById('playerAicon').src = "./inuse.png?random="+new Date().getTime();
   });
   colourSwatchA = document.getElementById("playerASwatch");
     let child = colourSwatchA.lastElementChild;
@@ -190,17 +206,17 @@ function iconchangeA(char, colour) {
       skinIcon.appendChild(skinChoice);
       clickmaker = document.getElementById('playerASwatch').lastChild;
       clickmaker.addEventListener('click', function() {
-        fs.copyFile('./icons/' + char + '_' + element + '.png', './icons/inuse.png', (err) => {
+        fs.copyFile('./icons/' + char + '_' + element + '.png', './inuse.png', (err) => {
           if (err) throw err;
           console.log('A changed to ' + char + element +'!');
-          document.getElementById('playerAicon').src = "./icons/inuse.png?random="+new Date().getTime();
+          document.getElementById('playerAicon').src = "./inuse.png?random="+new Date().getTime();
         });
       });
       clickmaker.addEventListener('contextmenu', function() {
-        fs.copyFile('./icons/' + char + '_' + element + '.png', './icons/inuse.png', (err) => {
+        fs.copyFile('./icons/' + char + '_' + element + '.png', './inuse.png', (err) => {
           if (err) throw err;
           console.log('A changed to ' + char + element +'!');
-          document.getElementById('playerAicon').src = "./icons/inuse.png?random="+new Date().getTime();
+          document.getElementById('playerAicon').src = "./inuse.png?random="+new Date().getTime();
         });
       });
     };
@@ -210,10 +226,10 @@ function iconchangeA(char, colour) {
 
 
 function iconchangeB(char, colour) {
-  fs.copyFile('./icons/' + char + '_' + colour + '.png', './icons/inuseB.png', (err) => {
+  fs.copyFile('./icons/' + char + '_' + colour + '.png', './inuseB.png', (err) => {
     if (err) throw err;
     console.log('B changed to ' + char + colour +'!');
-    document.getElementById('playerBicon').src = "./icons/inuseB.png?random="+new Date().getTime();
+    document.getElementById('playerBicon').src = "./inuseB.png?random="+new Date().getTime();
   });
   colourSwatchB = document.getElementById("playerBSwatch");
     let child = colourSwatchB.lastElementChild;
@@ -230,17 +246,17 @@ function iconchangeB(char, colour) {
       skinIcon.appendChild(skinChoice);
       clickmaker = document.getElementById('playerBSwatch').lastChild;
       clickmaker.addEventListener('click', function() {
-        fs.copyFile('./icons/' + char + '_' + element + '.png', './icons/inuseB.png', (err) => {
+        fs.copyFile('./icons/' + char + '_' + element + '.png', './inuseB.png', (err) => {
           if (err) throw err;
           console.log('B changed to ' + char + element +'!');
-          document.getElementById('playerBicon').src = "./icons/inuseB.png?random="+new Date().getTime();
+          document.getElementById('playerBicon').src = "./inuseB.png?random="+new Date().getTime();
         });
       });
       clickmaker.addEventListener('contextmenu', function() {
-        fs.copyFile('./icons/' + char + '_' + element + '.png', './icons/inuseB.png', (err) => {
+        fs.copyFile('./icons/' + char + '_' + element + '.png', './inuseB.png', (err) => {
           if (err) throw err;
           console.log('B changed to ' + char + element +'!');
-          document.getElementById('playerBicon').src = "./icons/inuseB.png?random="+new Date().getTime();
+          document.getElementById('playerBicon').src = "./inuseB.png?random="+new Date().getTime();
         });
       });
     };
