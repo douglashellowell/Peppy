@@ -7,17 +7,21 @@
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body style="-webkit-app-region: drag;">
-
     <!-- Round selection  Winners/Losers Round #/Semis/Finals-->
     <div class="roundStage"> 
       <p class="reset" onclick="resetpage()">Reset &#8617</p>
       <div class="roundStageselectors">
         <select name="backetSide" id="bracketSide" class="roundDropdown">
           <option value="" disabled selected>Bracket Side</option>
-          <option value="Winners">Winners</option>
-          <option value="Losers">Losers</option>
-          <option value="Pools">Pools</option>
-          <option value="Friendlies">Friendlies</option>
+          <optgroup label="Bracket Side">
+            <option value="Winners">Winners</option>
+            <option value="Losers">Losers</option>
+            <option value="Pools">Pools</option>
+          </optgroup>
+          <optgroup label="Extras">
+            <option value="Friendlies">Friendlies</option>
+            <option value="Money Match">Money Match</option>
+          </optgroup>
         </select>
         <select name="roundID" id="roundID" class="roundDropdown">
           <option value="" disabled selected>Round</option>
@@ -67,10 +71,10 @@
       </div>
 
       <div id='AiconDiv'>
-        <div class="inuseicon"><img id ="playerAicon" src="./icons/inuse.png" alt="playerAicon" height="50px" width="50px"></div>
+        <div class="inuseicon"><img id ="playerAicon" src="./inuseA.png" alt="playerAicon" height="50px" width="50px"></div>
         <div class="iconswatch" id="playerASwatch">
-          <p class="clickhint">left-click an icon</p>
         </div>
+        <p class="clickhint">left-click an icon</p>
       </div>
 
     </div>
@@ -87,10 +91,10 @@
       </div>
   
       <div id='BiconDiv'>
-          <div class="inuseicon"><img id ="playerBicon" src="./icons/inuseB.png" alt="playerBicon" height="50px" width="50px" ></div>
+          <div class="inuseicon"><img id ="playerBicon" src="./inuseB.png" alt="playerBicon" height="50px" width="50px" ></div>
           <div class="iconswatch" id="playerBSwatch">
-            <p class="clickhint">right-click an icon</p>
           </div>
+          <p class="clickhint">right-click an icon</p>
       </div>
   
     </div>
